@@ -4,7 +4,6 @@ require("dbconnect.php");
 $uid=$_SESSION['uid'];
 $cid=$_SESSION['cid'];
 $bid=$_GET['bid'];
-$from=$_GET['from'];
 $sql = "select * from company where cid='$cid';";
 $result=mysqli_query($conn,$sql) or die("DB Error: Cannot retrieve message.");
 ?>
@@ -165,7 +164,6 @@ $result=mysqli_query($conn,$sql) or die("DB Error: Cannot retrieve message.");
 		</div>
 	</div>
 	<input type="hidden" value="<?php echo $bid;?>" name="bid"/>
-	<input type="hidden" value="<?php echo $from;?>" name="from"/>
 	<input type="submit" value="送出訂單" class="btn btn-danger" />
 </form>
 </div>

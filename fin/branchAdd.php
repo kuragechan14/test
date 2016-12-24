@@ -24,8 +24,7 @@ $limit_c=$_POST['limit_c'];
 			<span class="glyphicon glyphicon-user"></span> Home</a>
         </div>
         <ul class="nav navbar-nav">
-            <li><a href="branchList.php">所有分店</span></a></li>
-            <li><a href="CPorderForm.php">總店庫存訂貨</a></li>
+            <li><a href="branchList.php">查看分店</span></a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> 登出</a></li>

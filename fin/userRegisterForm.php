@@ -53,9 +53,9 @@ require("dbconnect.php");
 				for ($i=1;$i<=10;$i++)
 				{
 					if ($i==1)
-						echo "<option value='".($i*10000)."' select='true' >".($i*10000)."　　　　</option>";
+						echo "<option value='".($i*100000)."' select='true' >".($i*100000)."　　　　</option>";
 					else
-						echo "<option value='".($i*10000)."'>".($i*10000)."　　　　</option>";
+						echo "<option value='".($i*100000)."'>".($i*100000)."　　　　</option>";
 				}
 			?>
 			</select>

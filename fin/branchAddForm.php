@@ -12,16 +12,32 @@ while ($p_row=mysqli_fetch_assoc($p_rs)) {
 	if($p_row['pid']==3){$pname_c=$p_row['pname'];}
 }
 ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<title>模擬麵包零售賣場</title>
+<title>麵包零售賣場</title>
+<style type="text/css">
+body {
+background-image: url(Bform.jpg);
+background-repeat: no-repeat;
+background-position: center center;
+background-size:cover;
+letter-spacing:8px;
+font-family:文鼎特毛楷;
+font-size:large;
+}
+
+</style>
 </head>
+<body>
 <a href="index.php"><span class="glyphicon glyphicon-home"></span>首頁</a>
+<div align="center" >
 <div class="container">
-<h1>模擬麵包零售賣場</h1><hr/>
+<h1>麵包零售賣場</h1><hr/>
 <nav class="nav navbar-default">
     <div class="container-fluid">
 		<div class="navbar-header">
@@ -36,16 +52,17 @@ while ($p_row=mysqli_fetch_assoc($p_rs)) {
         </ul>
     </div>
 </nav>
+</div>
 <h3><label>新增分店</label></h3>
 <form method="post" action="branchAdd.php" class="form-horizontal">
 	<div class="form-group row">
-		<div class="col-md-2"><label>分店名：</label></div>
+		<div class="col-md-6"><label>分店名：</label></div>
 		<div class="col-md-4">
 			<input name="bname" type="text" class="form-control" id="bname" />
 		</div>
 	</div>
 	<div class="form-group row">
-		<div class="col-md-2"><label><?php echo $pname_a;?> 庫存上限：</label></div>
+		<div class="col-md-6"><label><?php echo $pname_a;?> 庫存上限：</label></div>
 		<div class="col-md-4">
 		<select name="limit_a" class="form-control">
 		<?php
@@ -61,7 +78,7 @@ while ($p_row=mysqli_fetch_assoc($p_rs)) {
 		</div>
 	</div>
 	<div class="form-group row">
-		<div class="col-md-2"><label><?php echo $pname_b;?> 庫存上限：</label></div>
+		<div class="col-md-6"><label><?php echo $pname_b;?> 庫存上限：</label></div>
 		<div class="col-md-4">
 		<select name="limit_b" class="form-control">
 		<?php
@@ -77,7 +94,7 @@ while ($p_row=mysqli_fetch_assoc($p_rs)) {
 		</div>
 	</div>
 	<div class="form-group row">
-		<div class="col-md-2"><label><?php echo $pname_c;?> 庫存上限：</label></div>
+		<div class="col-md-6"><label><?php echo $pname_c;?> 庫存上限：</label></div>
 		<div class="col-md-4">
 		<select name="limit_c" class="form-control">
 		<?php
@@ -95,3 +112,6 @@ while ($p_row=mysqli_fetch_assoc($p_rs)) {
 	<input type="submit" value="確定新增" class="btn btn-success" />
 </form>
 </div>
+</div>
+</body>
+</html>

@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
-$user = 'root';
-$pass = '';
-$db = 'se_fin_demo';
-$conn = mysqli_connect($host, $user, $pass, $db) or die('Error with MySQL connection'); //跟MyMSQL連線並登入
-mysqli_query($conn,"SET NAMES utf8"); //選擇編碼
+$user = 'se_final';
+$password = '123';
+$db = 'se_final';
+$conn = mysqli_connect($host,$user,$password,$db) or die ('Error with MySQL connection');
+mysqli_query($conn,"SET NAMES utf8");
 ?>

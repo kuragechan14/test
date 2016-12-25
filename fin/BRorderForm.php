@@ -7,16 +7,30 @@ $bid=$_GET['bid'];
 $sql = "select * from company where cid='$cid';";
 $result=mysqli_query($conn,$sql) or die("DB Error: Cannot retrieve message.");
 ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<title>模擬麵包零售賣場</title>
+<title>麵包零售賣場</title>
+<style type="text/css">
+body {
+background-image: url(Bship1.jpg);
+background-repeat: no-repeat;
+background-position: center center;
+background-size:cover;
+font-family:文鼎特毛楷;
+font-size:large;
+}
+</style>
 </head>
+<body>
 <a href="index.php"><span class="glyphicon glyphicon-home"></span>首頁</a>
+<div align="center" >
 <div class="container">
-<h1>模擬麵包零售賣場</h1><hr/>
+<h1>麵包零售賣場</h1><hr/>
 <nav class="nav navbar-default">
     <div class="container-fluid">
 		<div class="navbar-header">
@@ -24,8 +38,7 @@ $result=mysqli_query($conn,$sql) or die("DB Error: Cannot retrieve message.");
 			<span class="glyphicon glyphicon-user"></span> Home</a>
         </div>
         <ul class="nav navbar-nav">
-            <li><a href="branchList.php">所有分店</span></a></li>
-            <li><a href="CPorderForm.php">總店庫存訂貨</a></li>
+            <li><a href="branchList.php">查看分店</span></a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> 登出</a></li>
@@ -168,3 +181,6 @@ $result=mysqli_query($conn,$sql) or die("DB Error: Cannot retrieve message.");
 </form>
 </div>
 <br /><br /><br />
+</div>
+</body>
+</html>
